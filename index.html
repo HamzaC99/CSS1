@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS - Assignment 1</title>
+    <style>
+        .parni-brojevi {
+            color: red;
+        }
+        .neparni-brojevi {
+            color: blue;
+        }
+        #special:hover {
+            font-style: italic;
+        }
+        .pseudo::after {
+            content: " -NEW";
+            color: red;
+            font-style: italic;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/" style="color: green;">Google</a>
+    <a href="https://www.google.com/doodles" style="color: green;">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank" style="color: red;">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p class="pseudo">Paragraph 2</p>
+        <p class="pseudo">Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p class="parni-brojevi">Paragraph 4</p>
+            <p class="neparni-brojevi">Paragraph 5</p>
+            <p class="parni-brojevi">Paragraph 6</p>
+            <p class="neparni-brojevi">Paragraph 7</p>
+            <p class="parni-brojevi">Paragraph 8</p>
+        </div>
+    </div>
+    <p class="neparni-brojevi">Paragraph 9</p>
+    <p id="special">Paragraph 10</p>
+</body>
+
+</html>
