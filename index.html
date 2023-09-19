@@ -5,45 +5,55 @@
     <meta charset="UTF-8">
     <title>Advanced CSS - Assignment 1</title>
     <style>
-        .parni-brojevi {
-            color: red;
+        a[href*="google"] {
+             color: green;
         }
-        .neparni-brojevi {
-            color: blue;
+        a[href*="link-group"] {
+             color: red;
         }
-        #special:hover {
-            font-style: italic;
+
+        h2 ~ p::after {
+             content: " -NEW";
+             color: red;
+             font-style: italic;
         }
-        .pseudo::after {
-            content: " -NEW";
-            color: red;
-            font-style: italic;
+ 
+        h3 ~ p:nth-child(even) {
+             color: blue;
         }
-        
+
+        h3 ~ p:nth-child(odd) {
+             color: red;
+        }
+
+        p:last-child:not(:nth-child(6)):hover {
+             font-style: italic;
+        }
+
     </style>
 </head>
 
 <body>
     <h1>Main Heading</h1>
     <p>Paragraph 1</p>
-    <a href="https://www.google.com/" style="color: green;">Google</a>
-    <a href="https://www.google.com/doodles" style="color: green;">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_blank" style="color: red;">Goto Link Group</a>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
     <div id="first-div">
         <h2>Subheading</h2>
-        <p class="pseudo">Paragraph 2</p>
-        <p class="pseudo">Paragraph 3</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
         <div id="second-div">
             <h3>Sub subheading</h3>
-            <p class="parni-brojevi">Paragraph 4</p>
-            <p class="neparni-brojevi">Paragraph 5</p>
-            <p class="parni-brojevi">Paragraph 6</p>
-            <p class="neparni-brojevi">Paragraph 7</p>
-            <p class="parni-brojevi">Paragraph 8</p>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
         </div>
     </div>
-    <p class="neparni-brojevi">Paragraph 9</p>
-    <p id="special">Paragraph 10</p>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
 </body>
 
 </html>
